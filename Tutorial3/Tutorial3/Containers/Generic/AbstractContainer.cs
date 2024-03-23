@@ -4,11 +4,11 @@ namespace Tutorial3.Containers;
 
 public abstract class AbstractContainer : IContainer
 {
-    protected double CargoWeight { get; set; }
+    public double CargoWeight { get; set; }
     protected double Height { get; set; }
     protected double CurbWeight { get; set; }
     protected double Depth { get; set; }
-    protected string SerialNumber { get; set; }
+    public string SerialNumber { get; set; }
     protected double MaxCargoWeight { get; set; }
 
     protected AbstractContainer(double height, double curbWeight, double depth, string serialNumber, double maxCargoWeight)
