@@ -16,7 +16,7 @@ public class LiquidContainer : AbstractContainer, IHazardNotifier
 
     public void Notify()
     {
-        if (LiquidType == LiquidType.HAZARDOUS)
+        if (LiquidType == LiquidType.Hazardous)
         {
             Console.WriteLine("There was a dangerous situation in container " + base.SerialNumber + "!");
         }
@@ -25,13 +25,13 @@ public class LiquidContainer : AbstractContainer, IHazardNotifier
     public override void Load(double cargoWeight)
     {
         // W innym wypadku możemy go wypełnić do 90% jego pojemności
-        if (LiquidType == LiquidType.STANDARD && cargoWeight > MaxCargoWeight * 0.9)
+        if (LiquidType == LiquidType.Standard && cargoWeight > MaxCargoWeight * 0.9)
         {
             Console.WriteLine("Attempt to perform a hazardous situation. Standard liquids should not exceed 90% of capacity.");
         }
 
         // Jeśli kontener przechowuje niebezpieczny ładunek - możemy go wypełnić jedynie do 50% pojemności
-        if(LiquidType == LiquidType.HAZARDOUS && cargoWeight > MaxCargoWeight / 2)
+        if(LiquidType == LiquidType.Hazardous && cargoWeight > MaxCargoWeight / 2)
         {
             Console.WriteLine("Attempt to perform a hazardous situation. Hazardous liquids should not exceed 50% of capacity.");
         }
