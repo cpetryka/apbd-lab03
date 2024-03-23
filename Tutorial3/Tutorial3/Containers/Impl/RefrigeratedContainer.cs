@@ -7,7 +7,7 @@ public class RefrigeratedContainer : AbstractContainer
     private double Temperature { get; set; }
 
     public RefrigeratedContainer(double height, double curbWeight, double depth, double maxCargoWeight, string allowedProductType,
-        double temperature) : base(height, curbWeight, depth, "KON-G-" + ++_sRefrigeratedContainersCounter, maxCargoWeight)
+        double temperature) : base(height, curbWeight, depth, "KON-C-" + ++_sRefrigeratedContainersCounter, maxCargoWeight)
     {
         AllowedProductType = allowedProductType;
         Temperature = temperature;
