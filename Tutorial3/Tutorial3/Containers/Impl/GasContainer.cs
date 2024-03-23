@@ -5,7 +5,7 @@ namespace Tutorial3.Containers.Impl;
 public class GasContainer : AbstractContainer, IHazardNotifier
 {
     private static int _sGasContainersCounter = 0;
-    public double Pressure { get; set; }
+    private double Pressure { get; set; }
 
     public GasContainer(double height, double curbWeight, double depth, double maxCargoWeight, double pressure)
         : base(height, curbWeight, depth, "KON-G-" + ++_sGasContainersCounter, maxCargoWeight)
