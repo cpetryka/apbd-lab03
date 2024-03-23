@@ -5,10 +5,11 @@ namespace Tutorial3.Containers.Impl;
 
 public class LiquidContainer : AbstractContainer, IHazardNotifier
 {
+    private static int _sLiquidContainersCounter = 0;
     private LiquidType LiquidType { get; set; }
 
-    public LiquidContainer(double height, double curbWeight, double depth, string serialNumber, double maxCargoWeight,
-        LiquidType liquidType) : base(height, curbWeight, depth, serialNumber, maxCargoWeight)
+    public LiquidContainer(double height, double curbWeight, double depth, double maxCargoWeight, LiquidType liquidType)
+        : base(height, curbWeight, depth, "KON-L-" + ++_sLiquidContainersCounter, maxCargoWeight)
     {
         LiquidType = liquidType;
     }
