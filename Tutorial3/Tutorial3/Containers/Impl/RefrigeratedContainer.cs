@@ -12,4 +12,18 @@ public class RefrigeratedContainer : AbstractContainer
         AllowedProductType = allowedProductType;
         Temperature = temperature;
     }
+
+    public override string ToString()
+    {
+        return "RefrigeratedContainer{" +
+               "AllowedProductType='" + AllowedProductType + '\'' +
+               ", Temperature=" + Temperature +
+               ", CargoWeight=" + CargoWeight +
+               ", Height=" + Height +
+               ", CurbWeight=" + CurbWeight +
+               ", Depth=" + Depth +
+               ", SerialNumber='" + SerialNumber + '\'' +
+               ", MaxCargoWeight=" + MaxCargoWeight +
+               '}';
+    }
 }

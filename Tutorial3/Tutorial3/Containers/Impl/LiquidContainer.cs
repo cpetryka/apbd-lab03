@@ -38,4 +38,17 @@ public class LiquidContainer : AbstractContainer, IHazardNotifier
 
         base.Load(cargoWeight);
     }
+
+    public override string ToString()
+    {
+        return "LiquidContainer{" +
+               "LiquidType=" + LiquidType +
+               ", CargoWeight=" + CargoWeight +
+               ", Height=" + Height +
+               ", CurbWeight=" + CurbWeight +
+               ", Depth=" + Depth +
+               ", SerialNumber='" + SerialNumber + '\'' +
+               ", MaxCargoWeight=" + MaxCargoWeight +
+               '}';
+    }
 }

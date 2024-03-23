@@ -32,4 +32,17 @@ public class GasContainer : AbstractContainer, IHazardNotifier
     {
         Console.WriteLine("There was a dangerous situation in container " + base.SerialNumber + "!");
     }
+
+    public override string ToString()
+    {
+        return "GasContainer{" +
+               "Pressure=" + Pressure +
+               ", CargoWeight=" + CargoWeight +
+               ", Height=" + Height +
+               ", CurbWeight=" + CurbWeight +
+               ", Depth=" + Depth +
+               ", SerialNumber='" + SerialNumber + '\'' +
+               ", MaxCargoWeight=" + MaxCargoWeight +
+               '}';
+    }
 }
